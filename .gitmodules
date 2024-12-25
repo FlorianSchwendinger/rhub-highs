@@ -1,3 +1,0 @@
-[submodule "inst/HiGHS"]
-	path = inst/HiGHS
-	url = git@github.com:FlorianSchwendinger/HiGHS.git
