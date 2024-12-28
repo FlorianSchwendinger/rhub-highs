@@ -356,7 +356,7 @@ set(highs_headers
     parallel/HighsParallel.h
     parallel/HighsRaceTimer.h
     parallel/HighsSchedulerConstants.h
-    parallel/HighsSpinMutex.h
+    parallel/HighsSpinMutex.hKktCh2.cpp
     parallel/HighsSplitDeque.h
     parallel/HighsTask.h
     parallel/HighsTaskExecutor.h

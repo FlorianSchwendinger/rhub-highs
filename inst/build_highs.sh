@@ -78,7 +78,7 @@ if test "$(uname -s)" = "Darwin"; then
     ${CMAKE_EXE} .. ${CMAKE_OPTS} -DFAST_BUILD:bool=ON
 else
     # FAST_BUILD fails on Windows, for the other platforms both seams to work.
-    ${CMAKE_EXE} .. ${CMAKE_OPTS} -DFAST_BUILD:bool=ON -G "Unix Makefiles"
+    ${CMAKE_EXE} .. ${CMAKE_OPTS} -DFAST_BUILD:bool=OFF -G "Unix Makefiles"
 fi
 
 ${MAKE} install
