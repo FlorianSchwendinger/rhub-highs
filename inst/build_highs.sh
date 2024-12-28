@@ -72,7 +72,7 @@ echo ""
 # But than it fails since prior to 4.2.0 R-win tries to compile and test for 'i386' and 'x64'
 # and fails for 'i386'.
 # if test "${OS_TYPE}" = "unix"; then
-CMAKE_OPTS="-DCMAKE_INSTALL_PREFIX=${R_HIGHS_LIB_DIR} -DCMAKE_POSITION_INDEPENDENT_CODE:bool=ON -DBUILD_SHARED_LIBS:bool=OFF -DBUILD_TESTING:bool=OFF -DZLIB:bool=OFF -DBUILD_EXAMPLES:bool=OFF"
+CMAKE_OPTS="-DCMAKE_INSTALL_PREFIX=${R_HIGHS_LIB_DIR} -DCMAKE_POSITION_INDEPENDENT_CODE:bool=ON -DBUILD_SHARED_LIBS:bool=OFF -DBUILD_TESTING:bool=OFF -DZLIB:bool=OFF -DBUILD_EXAMPLES:bool=OFF -DUSE_DOTNET_STD_21:bool=OFF"
 if test "$(uname -s)" = "Darwin"; then
     # Use FastBuild only on Darwin otherwise I run in warings hell.
     ${CMAKE_EXE} .. ${CMAKE_OPTS} -DFAST_BUILD:bool=ON
