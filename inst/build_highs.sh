@@ -75,10 +75,10 @@ echo ""
 CMAKE_OPTS="-DCMAKE_INSTALL_PREFIX=${R_HIGHS_LIB_DIR} -DCMAKE_POSITION_INDEPENDENT_CODE:bool=ON -DBUILD_SHARED_LIBS:bool=OFF -DBUILD_TESTING:bool=OFF -DZLIB:bool=OFF -DBUILD_EXAMPLES:bool=OFF"
 if test "$(uname -s)" = "Darwin"; then
     # Use FastBuild only on Darwin otherwise I run in warings hell.
-    ${CMAKE_EXE} .. ${CMAKE_OPTS} -DFAST_BUILD:bool=ON -DBUILD_TESTING:bool=OFF
+    ${CMAKE_EXE} .. ${CMAKE_OPTS} -DFAST_BUILD:bool=ON
 else
     # FAST_BUILD fails on Windows, for the other platforms both seams to work.
-    ${CMAKE_EXE} .. ${CMAKE_OPTS} -DFAST_BUILD:bool=ON -DBUILD_TESTING:bool=OFF -G "Unix Makefiles"
+    ${CMAKE_EXE} .. ${CMAKE_OPTS} -DFAST_BUILD:bool=ON -G "Unix Makefiles"
 fi
 
 ${MAKE} install
